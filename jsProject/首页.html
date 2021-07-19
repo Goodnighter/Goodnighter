@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			
+		</script>
+		
+		<script src="js/JQuery.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">  
+				<style>
+					.swiper-container{
+					/* 	width: 920px;
+						height: 275px; */
+					}
+				</style>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			#top{
+				padding: 5px 200px;
+				/* border: solid; */
+				overflow: hidden;
+			}
+			#inp{
+				float: left;
+				border: 1px  solid lightgray; 
+				height: 40px;
+				width: 240px;
+				/* margin-top: 0px; */
+				margin: 20px;
+				border-radius: 20px;
+				
+			}
+			#inp input{
+				width: 180px;
+				height: 34px;
+				border: none;
+				outline: none ;
+				font-size: 14px;
+				margin-left: 10px;
+				margin-top: 4px;
+				/* margin: auto; */
+			}
+			#top_right{
+				float: right;
+				/* border: solid; */
+				width: 320px;
+				margin-top: 20px;
+			}
+			#top p{
+				float: left;
+				margin-left: 20px;
+				line-height: 40px;
+			}
+			#top p:last-child{
+				text-align: center;
+				background-color: #FFD500;
+				width: 120px;
+				height: 40px;
+				line-height: 40px;
+				border-radius: 20px;
+			}
+			#top span:hover{
+				color: #F32196;
+			}
+			
+			
+			#center{
+				height: 60px;
+				background-color: #F7F7F7;
+				text-align: 60px;
+				padding: 0px 200px;
+				/* border: solid; */
+			}
+			.center_span{
+				text-align: 40px;
+			}
+			#center a{
+				text-align: 40px;
+				margin: 10px;
+				margin-top: 14px;
+				/* border: solid; */
+				display: inline-block;
+			}
+			#center2{
+				
+				margin: 0px 200px;
+				margin-top: 20px;
+				height: 360px;
+				/* border: solid; */
+				border-radius: 20px;
+				overflow: hidden;
+			}
+			#center3{
+				
+				margin: 0px 200px;
+				margin-top: 20px;
+				height: 360px;
+				/* border: solid; */
+				
+				overflow: hidden;
+			}
+			#center3 div{
+				margin-top: 10px;
+				height: 250px;
+				/* border: solid; */
+				float: left;
+				width: 210px;
+				margin-left: 8px;
+				border-radius: 20px;
+				overflow: hidden;
+				background-color: #FAFAFA;
+			}
+			#center3 img{
+				width: 100%;
+			}
+			#center3 p{
+				margin-top: 10px;
+				
+			}
+			#center3 div p:nth-child(2){
+				width: 300px;
+			}
+			#center3 div p:nth-child(3){
+				margin-top: 20px;
+				color: red;
+				text-align: center;
+			}
+			#center3 div p:nth-child(4){
+				margin-bottom: 10px;
+				color: darkgray;
+				text-align: center;
+				font-size: 14px;
+				margin-bottom: 10px;
+			}
+			#center3 div:hover{
+				box-shadow: 5px 5px 10px 0px #A9A9A9;
+				transform: translateY(-5px);
+				transition: all 0.5s;
+			}
+			
+			#content{
+				background-color: #F5F5F5;
+				/* margin: 0px 200px; */
+				padding: 0px 200px;
+				margin-top: 20px;
+				overflow: hidden;
+				/* border: solid; */
+			}
+			#content_1{
+				/* border: solid; */
+				overflow: hidden;
+			}
+			#content_1 p:nth-child(1){
+				margin-top: 40px;
+				margin-left: 10px;
+			}
+			
+			#content_1 div{
+				margin-top: 10px;
+				height: 260px;
+				/* border: solid; */
+				float: left;
+				width: 270px;
+				margin-left: 8px;
+				border-radius: 20px;
+				overflow: hidden;
+				background-color: #FAFAFA;
+			}
+			#content_1 div:hover{
+				box-shadow: 5px 5px 10px 0px #A9A9A9;
+				transform: translateY(-5px);
+				transition: all 0.5s;
+			}
+			#content_1 p span:first-child{
+				font-size: 28px;
+				margin-right: 20px;
+			}
+			#content_1 p span:nth-child(2){
+				color: red;
+			}
+			#content img{
+				width: 100%;
+			}
+			
+			#content div p:nth-child(2){
+				width: 300px;
+			}
+			#content div p:nth-child(3){
+				margin-top: 20px;
+				color: red;
+				text-align: center;
+			}
+			#content div p:nth-child(4){
+				margin-bottom: 10px;
+				color: darkgray;
+				text-align: center;
+				font-size: 14px;
+				margin-bottom: 10px;
+			}
+			
+			#content_2{
+				overflow: hidden;
+				/* border: solid; */
+			}
+			#content_2 p:nth-child(1){
+				margin-top: 40px;
+				margin-left: 10px;
+			}
+			
+			#content_2 div{
+				margin-top: 10px;
+				height: 260px;
+				/* border: solid; */
+				float: left;
+				width: 270px;
+				margin-left: 8px;
+				border-radius: 20px;
+				overflow: hidden;
+				background-color: #FAFAFA;
+				
+			}
+			#content_2 div:hover{
+				box-shadow: 5px 5px 10px 0px #A9A9A9;
+				transform: translateY(-5px);
+				transition: all 0.5s;
+			}
+			#content_2 p:first-child{
+				margin-top: 10px;
+				margin-left: 10px;
+				
+				/* border: solid; */
+			}
+			#content_2 p span:first-child{
+				font-size: 28px;
+				margin-right: 20px;
+			}
+			#content_2 p span:nth-child(2){
+				color: red;
+			}
+			
+			#content_3{
+				overflow: hidden;
+				/* border: solid; */
+			}
+			#content_3 p:nth-child(1){
+				margin-top: 40px;
+				margin-left: 10px;
+			}
+			
+			#content_3 div{
+				margin-top: 10px;
+				height: 260px;
+				/* border: solid; */
+				float: left;
+				width: 270px;
+				margin-left: 8px;
+				border-radius: 20px;
+				overflow: hidden;
+				background-color: #FAFAFA;
+				
+			}
+			#content_3 div:hover{
+				box-shadow: 5px 5px 10px 0px #A9A9A9;
+				transform: translateY(-5px);
+				transition: all 0.5s;
+			}
+			#content_3 p:first-child{
+				margin-top: 10px;
+				margin-left: 10px;
+				/* border: solid; */
+			}
+			#content_3 p span:first-child{
+				font-size: 28px;
+				margin-right: 20px;
+			}
+			#content_3 p span:nth-child(2){
+				color: red;
+			}
+			
+			#content_4{
+				overflow: hidden;
+				/* border: solid; */
+			}
+			#content_4 p:nth-child(1){
+				margin-top: 40px;
+				margin-left: 10px;
+			}
+			
+			#content_4 div{
+				margin-top: 10px;
+				height: 260px;
+				/* border: solid; */
+				float: left;
+				width: 270px;
+				margin-left: 8px;
+				border-radius: 20px;
+				overflow: hidden;
+				background-color: #FAFAFA;
+				
+			}
+			#content_4 div:hover{
+				box-shadow: 5px 5px 10px 0px #A9A9A9;
+				transform: translateY(-5px);
+				transition: all 0.5s;
+			}
+			#content_4 p:first-child{
+				margin-top: 10px;
+				margin-left: 10px;
+				/* border: solid; */
+			}
+			#content_4 p span:first-child{
+				font-size: 28px;
+				margin-right: 20px;
+			}
+			#content_4 p span:nth-child(2){
+				color: red;
+			}
+			
+			#content_5{
+				overflow: hidden;
+				/* border: solid; */
+			}
+			#content_5 p:nth-child(1){
+				margin-top: 40px;
+				margin-left: 10px;
+			}
+			
+			#content_5 div{
+				margin-top: 10px;
+				height: 260px;
+				/* border: solid; */
+				float: left;
+				width: 270px;
+				margin-left: 8px;
+				border-radius: 20px;
+				overflow: hidden;
+				background-color: #FAFAFA;
+				
+			}
+			#content_5 div:hover{
+				box-shadow: 5px 5px 10px 0px #A9A9A9;
+				transform: translateY(-5px);
+				transition: all 0.5s;
+			}
+			#content_5 p:first-child{
+				margin-top: 10px;
+				margin-left: 10px;
+				/* border: solid; */
+			}
+			#content_5 p span:first-child{
+				font-size: 28px;
+				margin-right: 20px;
+			}
+			#content_5 p span:nth-child(2){
+				color: red;
+			}
+			#content > div div{
+				height: 280px;
+			}
+			#content > div {
+				height: 420px;
+			}
+			
+			#bottom div{
+				padding: 0px 200px;
+			}
+			#bottom a{
+				margin-left: 20px;
+				margin-bottom: 20px;
+			}
+			#bottom a:hover{
+				color: #F32196;
+			}
+			#bottom_1 img:last-child{
+				margin-left: 800px;
+			}
+			#bottom_1 p:last-child{
+				margin-bottom: 20px;
+				font-size: 14px;
+			}
+			#bottom_2 p:nth-child(1){
+				margin-top: 20px;
+				margin-bottom: 20px;
+				font-size: 12px;
+			}
+			#bottom_2 p:last-child{
+				margin-top: 20px;
+				margin-bottom: 20px;
+				font-size: 14px;
+			}
+			#fix img{
+				width: 40px;
+			}
+			#fix{
+				position: fixed;
+				width: 200px;
+				/* height: 38px; */
+				bottom: 0;
+				margin-left: 48%;
+				/* border: solid; */
+				/* margin: 0 auto; */
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="top">
+			<img style="float: left;" src="http://47.105.96.139:8082/media/20191202214409zX.png" >
+			<div id="inp">
+				<input type="" name="" id="" value="" placeholder="输入关键词"/>
+				<!-- <img style="width: 30px;" src="img/3e77c283802823bd11a08098cd6ac7c.png" > -->
+				
+			</div>
+			<div id="top_right">
+				<p><span id="">
+					学习记录
+				</span>|<span id="">
+					会员特权
+				</span></p>
+				
+				<p><span id="">
+					登录
+				</span>|<span id="">
+					注册
+				</span></p>
+			</div>
+		</div>
+		
+		
+		<!-- center -->
+		<div id="center">
+			
+		</div>
+		
+		<div id="center2">
+			<div class="swiper-container">
+					    <div class="swiper-wrapper">
+					        <div class="swiper-slide"><img src="http://47.105.96.139:8082/media/20201107221424p8.jpg"/></div>
+					        <div class="swiper-slide"><img src="http://47.105.96.139:8082/media/20201107221434tk.jpg"/></div>
+					        <div class="swiper-slide"><img src="http://47.105.96.139:8082/media/20201107221440bP.jpg"/></div>
+					    </div>
+					    <!-- 如果需要分页器 -->
+					    <!-- <div class="swiper-pagination"></div> -->
+					    
+					    <!-- 如果需要导航按钮 -->
+					    <!-- <div class="swiper-button-prev"></div>
+					    <div class="swiper-button-next"></div> -->
+					    
+					    <!-- 如果需要滚动条 -->
+					    <!-- <div class="swiper-scrollbar"></div> -->
+					</div>
+		</div>
+		
+		
+		<div id="center3">
+			<p>网站公告：</p>
+			<p style="font-size: 22px; margin-top: 20px;">最新上架：</p>
+			<div id="">
+				
+			</div>
+			<div id="">
+				
+			</div>
+			<div id="">
+				
+			</div>
+			<div id="">
+				
+			</div>
+			<div id="">
+				
+			</div>
+		</div>
+		
+		<!-- content -->
+		<div id="content">
+			<div id="content_1">
+				<p>
+					<span id="">
+						
+					</span>共<span id="">
+					
+				</span>
+				节课
+				<p>
+					
+				</p>
+				</p>
+				<div id="">
+					
+				</div><div id="">
+					
+				</div><div id="">
+					
+				</div><div id="">
+					
+				</div>
+			</div>
+			<div id="content_2">
+				<p>
+					<span id="">
+						
+					</span>共<span id="">
+					
+				</span>
+				节课
+				<p>
+					
+				</p>
+				</p>
+				<div id="">
+					
+				</div><div id="">
+					
+				</div><div id="">
+					
+				</div><div id="">
+					
+				</div>
+			</div>
+			
+			<!-- <div id="content_2">
+				<p>
+					<span id="">
+						
+					</span>共<span id="">
+					
+				</span>
+				节课
+				<p>
+					
+				</p>
+				</p>
+				<div id="">
+					
+				</div><div id="">
+					
+				</div><div id="">
+					
+				</div><div id="">
+					
+				</div>
+			</div>
+			 -->
+			<div id="content_3">
+				<p>
+					<span id="">
+						
+					</span>共<span id="">
+					
+				</span>
+				节课
+				<p>
+					
+				</p>
+				</p>
+				<div id="">
+					
+				</div><div id="">
+					
+				</div><div id="">
+					
+				</div><div id="">
+					
+				</div>
+			</div>
+			
+			<div id="content_4">
+				<p>
+					<span id="">
+						
+					</span>共<span id="">
+					
+				</span>
+				节课
+				<p>
+					
+				</p>
+				</p>
+				<div id="">
+					
+				</div><div id="">
+					
+				</div><div id="">
+					
+				</div><div id="">
+					
+				</div>
+			</div>
+			
+			<div id="content_5">
+				<p>
+					<span id="">
+						
+					</span>共<span id="">
+					
+				</span>
+				节课
+				<p>
+					
+				</p>
+				</p>
+				<div id="">
+					
+				</div><div id="">
+					
+				</div><div id="">
+					
+				</div><div id="">
+					
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		<!-- bottom -->
+		<div id="bottom">
+			<div id="bottom_1">
+				<p><img src="http://47.105.96.139:8082/media/20191202214409zX.png" >
+				<img style="width: 100px;" src="http://47.105.96.139:8082/media/20191126224352Wf.jpg" ></p>
+				<p id="bottom_p"></p>
+			</div>
+			<hr >
+			<div id="bottom_2">
+				<p></p>
+				<p>Copyright © 2015-2020 您的公司名称 版权所有 京ICP备00000000号 在线客服：联系客服</p>
+			</div>
+		</div>
+		
+		<!-- fix -->
+		<div id="fix">
+			<img src="img/微信图片_20200514183623_看图王.jpg" >
+			<span id="">
+				@Wink
+			</span>
+		</div>
+	</body>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"> </script>
+		<script>
+				var mySwiper = new Swiper('.swiper-container', {
+					//direction: 'vertical', // 垂直切换选项,horizontal横向切换（默认）
+					loop: true, // 循环模式选项
+					initialSlide: 0, //设定初始化时slide的索引。Swiper默认初始化时显示第一个slide，有时想初始化时直接显示其他slide，可以做此设置。
+					speed: 400, //切换速度，即slider自动滑动开始到结束的时间（单位ms），也是触摸滑动时释放至贴合的时间。
+					//autoplay:true,//等同于以下设置
+					autoplay: {
+						delay: 3000, //自动切换的时间间隔，单位ms
+						//stopOnLastSlide: false,
+						//disableOnInteraction: true,
+						pauseOnMouseEnter: false, //鼠标置于swiper时暂停自动切换，默认关闭此功能。
+					},
+					// 如果需要分页器
+					/* pagination: {
+						el: '.swiper-pagination',
+					}, */
+		
+					// 如果需要前进后退按钮
+					// navigation: {
+					// 	nextEl: '.swiper-button-next',
+					// 	prevEl: '.swiper-button-prev',
+					// },
+		
+					// 如果需要滚动条
+					/* scrollbar: {
+					   el: '.swiper-scrollbar',
+					 }, */
+				})
+			</script>
+	<script type="text/javascript">
+		$.ajax({
+			type:'get',
+			url:'http://47.105.96.139:8082/napi/index/nav',
+			success:function(data){
+				var html=JSON.parse(data);
+				console.log(html);
+				var arr=html.data;
+				for(i=0;i<arr.length;i++){
+					var span_data=arr[i].title;
+					var a='<a herf="">'+span_data+'</a>';
+					$('#center').append(a);
+					// a.addClass('.center_span');
+					console.log(a)
+				}
+			}
+		})
+		//bottom
+		$.ajax({
+			type:'get',
+			url:'http://47.105.96.139:8082/napi/index/botLink',
+			success:function(data){
+				var html=JSON.parse(data);
+				console.log(html);
+				var arr=html.data;
+				for(i=0;i<arr.length;i++){
+					var span_data=arr[i].title;
+					var a='<a herf="">'+span_data+'</a>';
+					$('#bottom_p').append(a);
+					// a.addClass('.center_span');
+					
+				}
+			}
+		})
+		$.ajax({
+			type:'get',
+			url:'http://47.105.96.139:8082/napi/index/comLinks',
+			success:function(data){
+				let html=JSON.parse(data);
+				console.log(html);
+				let arr=html.data;
+				for(i=0;i<arr.length;i++){
+					var span_data=arr[i].title;
+					var a='<a herf="">'+span_data+'</a>';
+					$('#bottom_2').children('p').eq(0).append(a);
+					// a.addClass('.center_span');
+					
+				}
+			}
+		})
+		
+		$.ajax({
+			type:'get',
+			url:'http://47.105.96.139:8082/napi/index/newc',
+			success:function(data){
+				let html=JSON.parse(data);
+				// console.log(html);
+				let arr=html.data;
+				for(i=0;i<arr.length;i++){
+					var span_data=arr[i].pic;
+					var img='<img src=http://47.105.96.139:8082'+span_data+' ></img>';
+					// img.prop('src',span_data);
+					$('#center3').children('div').eq(i).append(img);
+					// a.addClass('.center_span');
+					// console.log(a)
+					
+					let span_data2=arr[i].title;
+					let p='<p>'+span_data2+'</p>';
+					$('#center3').children('div').eq(i).append(p);
+					// a.addClass('.center_span');
+					// console.log(p);
+					// p.css('margin_top',22)
+					
+					let span_data3=arr[i].price;
+					let p2='<p>￥'+span_data3+'</p>';
+					$('#center3').children('div').eq(i).append(p2);
+					// a.addClass('.center_span');
+					// console.log(p2);
+					
+					let span_data4=arr[i].view;
+					let p3='<p>'+span_data4+'人学习</p>';
+					$('#center3').children('div').eq(i).append(p3);
+					// a.addClass('.center_span');
+					// console.log(p3);
+				}
+			}
+		})
+		
+		
+		// content
+		$.ajax({
+			type:'get',
+			data:{sub:1},
+			url:'http://47.105.96.139:8082/napi/index/getccate',
+			success:function(data){
+				let html=JSON.parse(data);
+				console.log(html);
+				let arr=html.data.courses;
+				console.log(html.data.cate_name[0].title)
+				$('#content_1').find('span').eq(0).html(html.data.cate_name[0].title);
+				$('#content_1').find('span').eq(1).html(html.data.count);
+				for(i=0;i<arr.length;i++){
+					let pic=arr[i].pic;
+					
+					let img='<img src=http://47.105.96.139:8082'+pic+' ></img>';
+						// img.prop('src',span_data);
+					$('#content_1').children('div').eq(i).append(img);
+					
+					let span_data2=arr[i].title;
+					let p='<p>'+span_data2+'</p>';
+					$('#content_1').children('div').eq(i).append(p);
+					// a.addClass('.center_span');
+					// console.log(p);
+					// p.css('margin_top',22)
+					
+					let span_data3=arr[i].price;
+					let p2='<p>￥'+span_data3+'</p>';
+					$('#content_1').children('div').eq(i).append(p2);
+					// a.addClass('.center_span');
+					// console.log(p2);
+					
+					let span_data4=arr[i].view;
+					let p3='<p>'+span_data4+'人学习</p>';
+					$('#content_1').children('div').eq(i).append(p3);
+					
+				}
+			}
+		})
+		
+		
+		//content_2
+		$.ajax({
+			type:'get',
+			data:{sub:2},
+			url:'http://47.105.96.139:8082/napi/index/getccate',
+			success:function(data){
+				let html=JSON.parse(data);
+				console.log(html);
+				let arr=html.data.courses;
+				console.log(html.data.cate_name[0].title)
+				$('#content_2').find('span').eq(0).html(html.data.cate_name[0].title);
+				$('#content_2').find('span').eq(1).html(html.data.count);
+				for(i=0;i<arr.length;i++){
+					let pic=arr[i].pic;
+					
+					let img='<img src=http://47.105.96.139:8082'+pic+' ></img>';
+		
+						// img.prop('src',span_data);
+		
+					$('#content_2').children('div').eq(i).append(img);
+					
+					let span_data2=arr[i].title;
+					let p='<p>'+span_data2+'</p>';
+					$('#content_2').children('div').eq(i).append(p);
+					// a.addClass('.center_span');
+					// console.log(p);
+					// p.css('margin_top',22)
+					
+					let span_data3=arr[i].price;
+					let p2='<p>￥'+span_data3+'</p>';
+					$('#content_2').children('div').eq(i).append(p2);
+					// a.addClass('.center_span');
+					// console.log(p2);
+					
+					let span_data4=arr[i].view;
+					let p3='<p>'+span_data4+'人学习</p>';
+					$('#content_2').children('div').eq(i).append(p3);
+					
+				}
+			}
+		})
+		
+		//content_3
+		$.ajax({
+			type:'get',
+			data:{sub:3},
+			url:'http://47.105.96.139:8082/napi/index/getccate',
+			success:function(data){
+				let html=JSON.parse(data);
+				console.log(html);
+				let arr=html.data.courses;
+				console.log(html.data.cate_name[0].title)
+				$('#content_3').find('span').eq(0).html(html.data.cate_name[0].title);
+				$('#content_3').find('span').eq(1).html(html.data.count);
+				for(i=0;i<arr.length;i++){
+					let pic=arr[i].pic;
+					
+					let img='<img src=http://47.105.96.139:8082'+pic+' ></img>';
+		
+						// img.prop('src',span_data);
+		
+					$('#content_3').children('div').eq(i).append(img);
+					
+					let span_data2=arr[i].title;
+					let p='<p>'+span_data2+'</p>';
+					$('#content_3').children('div').eq(i).append(p);
+					// a.addClass('.center_span');
+					// console.log(p);
+					// p.css('margin_top',22)
+					
+					let span_data3=arr[i].price;
+					let p2='<p>￥'+span_data3+'</p>';
+					$('#content_3').children('div').eq(i).append(p2);
+					// a.addClass('.center_span');
+					// console.log(p2);
+					
+					let span_data4=arr[i].view;
+					let p3='<p>'+span_data4+'人学习</p>';
+					$('#content_3').children('div').eq(i).append(p3);
+					
+				}
+			}
+		})
+		
+		
+		//content_4
+		$.ajax({
+			type:'get',
+			data:{sub:4},
+			url:'http://47.105.96.139:8082/napi/index/getccate',
+			success:function(data){
+				let html=JSON.parse(data);
+				console.log(html);
+				let arr=html.data.courses;
+				console.log(html.data.cate_name[0].title)
+				$('#content_4').find('span').eq(0).html(html.data.cate_name[0].title);
+				$('#content_4').find('span').eq(1).html(html.data.count);
+				for(i=0;i<arr.length;i++){
+					let pic=arr[i].pic;
+					
+					let img='<img src=http://47.105.96.139:8082'+pic+' ></img>';
+		
+						// img.prop('src',span_data);
+		
+					$('#content_4').children('div').eq(i).append(img);
+					
+					let span_data2=arr[i].title;
+					let p='<p>'+span_data2+'</p>';
+					$('#content_4').children('div').eq(i).append(p);
+					// a.addClass('.center_span');
+					// console.log(p);
+					// p.css('margin_top',22)
+					
+					let span_data3=arr[i].price;
+					let p2='<p>￥'+span_data3+'</p>';
+					$('#content_4').children('div').eq(i).append(p2);
+					// a.addClass('.center_span');
+					// console.log(p2);
+					
+					let span_data4=arr[i].view;
+					let p3='<p>'+span_data4+'人学习</p>';
+					$('#content_4').children('div').eq(i).append(p3);
+					
+				}
+			}
+		})
+
+		//content_5
+		$.ajax({
+			type:'get',
+			data:{sub:5},
+			url:'http://47.105.96.139:8082/napi/index/getccate',
+			success:function(data){
+				let html=JSON.parse(data);
+				console.log(html);
+				let arr=html.data.courses;
+				console.log(html.data.cate_name[0].title)
+				$('#content_5').find('span').eq(0).html(html.data.cate_name[0].title);
+				$('#content_5').find('span').eq(1).html(html.data.count);
+				for(i=0;i<arr.length;i++){
+					let pic=arr[i].pic;
+					
+					let img='<img src=http://47.105.96.139:8082'+pic+' ></img>';
+		
+						// img.prop('src',span_data);
+		
+					$('#content_5').children('div').eq(i).append(img);
+					
+					let span_data2=arr[i].title;
+					let p='<p>'+span_data2+'</p>';
+					$('#content_5').children('div').eq(i).append(p);
+					// a.addClass('.center_span');
+					// console.log(p);
+					// p.css('margin_top',22)
+					
+					let span_data3=arr[i].price;
+					let p2='<p>￥'+span_data3+'</p>';
+					$('#content_5').children('div').eq(i).append(p2);
+					// a.addClass('.center_span');
+					// console.log(p2);
+					
+					let span_data4=arr[i].view;
+					let p3='<p>'+span_data4+'人学习</p>';
+					$('#content_5').children('div').eq(i).append(p3);
+					
+				}
+			}
+		})
+	</script>
+</html>
