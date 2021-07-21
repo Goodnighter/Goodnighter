@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			
+		</script>
+		
+		<script src="js/JQuery.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">  
+				<style>
+					.swiper-container{
+					/* 	width: 920px;
+						height: 275px; */
+					}
+				</style>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			#top{
+				padding: 5px 200px;
+				/* border: solid; */
+				overflow: hidden;
+			}
+			#inp{
+				float: left;
+				border: 1px  solid lightgray; 
+				height: 40px;
+				width: 240px;
+				/* margin-top: 0px; */
+				margin: 20px;
+				border-radius: 20px;
+				
+			}
+			#inp input{
+				width: 180px;
+				height: 34px;
+				border: none;
+				outline: none ;
+				font-size: 14px;
+				margin-left: 10px;
+				margin-top: 4px;
+				/* margin: auto; */
+			}
+			#top_right{
+				float: right;
+				/* border: solid; */
+				width: 320px;
+				margin-top: 20px;
+			}
+			#top p{
+				float: left;
+				margin-left: 20px;
+				line-height: 40px;
+			}
+			#top p:last-child{
+				text-align: center;
+				background-color: #FFD500;
+				width: 120px;
+				height: 40px;
+				line-height: 40px;
+				border-radius: 20px;
+			}
+			#top span:hover{
+				color: #F32196;
+				
+			}
+			
+			
+			#center{
+				height: 60px;
+				background-color: #F7F7F7;
+				text-align: 60px;
+				padding: 0px 200px;
+				/* border: solid; */
+			}
+			.center_span{
+				text-align: 40px;
+			}
+			#center a{
+				text-align: 40px;
+				margin: 10px;
+				margin-top: 14px;
+				/* border: solid; */
+				display: inline-block;
+			}
+			#center2{
+				background-color: #F32196;
+				height: 140px;
+				text-align: center;
+				line-height: 140px;
+				font-size: 36px;
+				color: white;
+			}
+			#center3{
+				width: 1000px;
+				height: 400px;
+				/* border: solid; */
+				margin: 0 auto;
+				margin-bottom: 200px;
+				margin-top: 100px;
+				
+			}
+			#center4{
+				padding: 20px 200px;
+				margin-top: 10px;
+				border-bottom: #F5F5F5 solid 20px;
+			}
+			#center4 a{
+				text-decoration: none;
+				color: black;
+				margin-left: 30px;
+				line-height: 20px;
+			}
+			#center4 a:hover{
+				color: #F32196;
+			}
+			#bottom div{
+				padding: 0px 200px;
+			}
+			#bottom a{
+				margin-left: 20px;
+				margin-bottom: 20px;
+			}
+			#bottom a:hover{
+				color: #F32196;
+			}
+			#bottom_1 img:last-child{
+				margin-left: 800px;
+			}
+			#bottom_1 p:last-child{
+				margin-bottom: 20px;
+				font-size: 14px;
+			}
+			#bottom_2 p:nth-child(1){
+				margin-top: 20px;
+				margin-bottom: 20px;
+				font-size: 12px;
+			}
+			#bottom_2 p:last-child{
+				margin-top: 20px;
+				margin-bottom: 20px;
+				font-size: 14px;
+			}
+			#fix img{
+				width: 40px;
+			}
+			#fix{
+				position: fixed;
+				width: 200px;
+				/* height: 38px; */
+				bottom: 0;
+				margin-left: 48%;
+				/* border: solid; */
+				/* margin: 0 auto; */
+			}
+			
+			/* 百度地图 */
+			#container {
+			    overflow: hidden;
+			    width: 100%;
+			    height: 100%;
+			    margin: 2.25rem auto;
+			    font-family: "微软雅黑";
+			}
+			.info {
+			    z-index: 999;
+			    width: auto;
+			    min-width: 22rem;
+			    padding: .75rem 1.25rem;
+			    
+			    position: fixed;
+			    top: 1rem;
+			    background-color: #fff;
+			    border-radius: .25rem;
+			    font-size: 14px;
+			    color: #666;
+			    box-shadow: 0 2px 6px 0 rgba(27, 142, 236, 0.5);
+				margin: 0 auto;
+				/* margin-left: -221px; */
+			}
+			.info2{
+			    z-index: 999;
+			    width: auto;
+			    min-width: 10rem;
+			    padding: .75rem 1.25rem;
+			    text-align: center;
+			    position: fixed;
+			    top: 1rem;
+			    background-color:  #666666;
+			    border-radius: .25rem;
+			    font-size: 14px;
+			    color: gold;
+			    box-shadow: 0 2px 6px 0 rgba(27, 142, 236, 0.5);
+				margin: 0 500px;
+				margin-top: 660px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="top">
+			<img style="float: left;" src="http://47.105.96.139:8082/media/20191202214409zX.png" >
+			<div id="inp">
+				<input type="" name="" id="" value="" placeholder="输入关键词"/>
+				<!-- <img style="width: 30px;" src="img/3e77c283802823bd11a08098cd6ac7c.png" > -->
+				
+			</div>
+			<div id="top_right">
+				<p><span id="">
+					学习记录
+				</span>|<span id="">
+					会员特权
+				</span></p>
+				
+				<p><span id="">
+					登录
+				</span>|<span id="">
+					注册
+				</span></p>
+			</div>
+		</div>
+		
+		
+		<!-- center -->
+		<div id="center">
+			
+		</div>
+		<div id="center2">
+			联系我们
+		</div>
+		<div id="center4">
+			<a href="">在线留言</a>
+			<a href="">联系方式</a>
+			<a href="">订单查询</a>
+			<a href="">官方微博</a>
+		</div>
+		<div id="center3">
+			<p style="font-size: 26px;">联系我们</p>
+			<div id="allmap"></div>
+			<div id="container"></div>
+			<p>联系方式：
+
+地址：北京市xx区xx路xx广场x号
+电话：86-010-xxxxxxxx
+传真：86-010-xxxxxxxxxxxxxxxx
+邮箱：xxxxxxxxx@qq.com
+网址：www.xxxxxx.com
+
+在线客服：
+
+售前咨询 QQ：123123123
+售后服务 旺旺：taobao
+代理咨询 电话：010-10086</p>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		<!-- bottom -->
+		<div id="bottom">
+			<div id="bottom_1">
+				<p><img src="http://47.105.96.139:8082/media/20191202214409zX.png" >
+				<img style="width: 100px;" src="http://47.105.96.139:8082/media/20191126224352Wf.jpg" ></p>
+				<p id="bottom_p"></p>
+			</div>
+			<hr >
+			<div id="bottom_2">
+				<p></p>
+				<p>Copyright © 2015-2020 您的公司名称 版权所有 京ICP备00000000号 在线客服：联系客服</p>
+			</div>
+		</div>
+		
+		<!-- fix -->
+		<div id="fix">
+			<img src="img/微信图片_20200514183623_看图王.jpg" >
+			<span id="">
+				@Wink
+			</span>
+		</div>
+	</body>
+	
+	<!-- 百度地图 -->
+	<script src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=xRkV0rFI2dVaooaxDP6O7uL0kbVf5GOM"></script>
+	<script>
+	var map = new BMapGL.Map('container'); // 创建Map实例
+	var point=new BMapGL.Point(116.404, 39.915);
+	map.centerAndZoom(point, 12); // 初始化地图,设置中心点坐标和地图级别
+	map.enableScrollWheelZoom(true); // 开启鼠标滚轮缩放
+	var marker2 = new BMapGL.Marker(point);
+	map.addOverlay(marker2);
+	var opts = {
+	    width: 200,
+	    height: 100,
+	    title: '故宫博物院'
+	};
+	var infoWindow = new BMapGL.InfoWindow('地址：北京市东城区王府井大街88号乐天银泰百货八层', opts);
+	// 点标记添加点击事件
+	marker2.addEventListener('click', function () {
+	    map.openInfoWindow(infoWindow, point); // 开启信息窗口
+	});
+	
+	//第三方版权
+	 var cr = new BMapGL.CopyrightControl({
+	            anchor: BMAP_ANCHOR_TOP_RIGHT,
+	            offset: new BMapGL.Size(20, 20)
+	        });   //设置版权控件位置
+		    map.addControl(cr); //添加版权控件
+	        var bs = map.getBounds();   //返回地图可视区域
+		    cr.addCopyright({
+	            id: 1, 
+	            content: "<img src='./img/微信图片_20200514183623_看图王.jpg' width='50px' height='50px'/><a href='#' style='font-size:16px;color:#000'>@王科的百度地图</a>", 
+	            bounds: bs
+	        });
+	        // map.setCopyrightOffset();
+			
+			
+			 var navi3DCtrl = new BMapGL.NavigationControl3D();  // 添加3D控件
+			    map.addControl(navi3DCtrl);
+				
+				//天空颜色
+				 map.setDisplayOptions({
+				            skyColors: ['rgba(0, 0, 0, 0)','rgba(0, 0, 255, 0.9)']
+				        })
+						
+						
+			//地球模式
+			
+			var info2=document.querySelector('.info2');
+			info2.addEventListener('click',function(){
+				map.setMapType(BMAP_EARTH_MAP);      // 设置地图类型为地球模式
+			})
+			
+				map.addTileLayer(new BMap.PanoramaCoverageLayer());
+			
+				var stCtrl = new BMap.PanoramaControl(); //构造全景控件
+				stCtrl.setOffset(new BMap.Size(20, 20));
+				map.addControl(stCtrl);//添加全景控件
+			
+	
+	</script>
+		
+		
+	<script type="text/javascript">
+		$.ajax({
+			type:'get',
+			url:'http://47.105.96.139:8082/napi/index/nav',
+			success:function(data){
+				var html=JSON.parse(data);
+				console.log(html);
+				var arr=html.data;
+				for(i=0;i<arr.length;i++){
+					var span_data=arr[i].title;
+					var a='<a herf="">'+span_data+'</a>';
+					$('#center').append(a);
+					// a.addClass('.center_span');
+					console.log(a)
+				}
+			}
+		})
+		//bottom
+		$.ajax({
+			type:'get',
+			url:'http://47.105.96.139:8082/napi/index/botLink',
+			success:function(data){
+				var html=JSON.parse(data);
+				console.log(html);
+				var arr=html.data;
+				for(i=0;i<arr.length;i++){
+					var span_data=arr[i].title;
+					var a='<a herf="">'+span_data+'</a>';
+					$('#bottom_p').append(a);
+					// a.addClass('.center_span');
+					
+				}
+			}
+		})
+		$.ajax({
+			type:'get',
+			url:'http://47.105.96.139:8082/napi/index/comLinks',
+			success:function(data){
+				let html=JSON.parse(data);
+				console.log(html);
+				let arr=html.data;
+				for(i=0;i<arr.length;i++){
+					var span_data=arr[i].title;
+					var a='<a herf="">'+span_data+'</a>';
+					$('#bottom_2').children('p').eq(0).append(a);
+					// a.addClass('.center_span');
+					
+				}
+			}
+		})
+		
+		
+
+		
+		
+		
+	</script>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/JQuery.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			body{
+				background-color:#5BA3E5 ;
+			}
+			#all{
+				width:300px ;
+				height: 460px;
+				background-color: white;
+				margin: 40px auto;
+				border-radius: 5px;
+				text-align: center;
+				padding: 60px 40px;
+			}
+			p{
+				font-size: 22px;
+			}
+			input{
+				width: 280px;
+				height: 40px;
+				margin-bottom: 10px;
+				margin-top: 40px;
+				border: none;
+				outline: none;
+				border-bottom: 1px solid lightgray;
+				font-size: 18px;
+				transition: all 0.5s;
+			}
+			.a{
+				border-bottom: 3px solid #5BA3E5;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="all">
+			<img src="http://47.105.96.139:8082/media/20191202214409zX.png" >
+			<p>会员登录</p>
+			<input type="text" name="" id="" value="" placeholder="邮箱/账号" style="font-size: 14px;" />
+			<input type="text" name="" id="" value=""placeholder="密码"style="font-size: 14px;" />
+		</div>
+	</body>
+	<script type="text/javascript">
+		$('input').focus(function(){
+			$(this).addClass('a');
+		})
+		// $('input').focus(function(){
+		// $('input').animate({
+		// 	backgroundColor:'red',
+		// },1000)
+		// })
+		$('input').blur(function(){
+			$(this).removeClass('a');
+		})
+	</script>
+</html>
